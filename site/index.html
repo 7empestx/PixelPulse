@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PIXELPULSE // AMBIENT INFO SYSTEM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#0e0e0e",
+                    "inverse-primary": "#006f16",
+                    "background": "#0e0e0e",
+                    "on-tertiary": "#5d3e00",
+                    "error-container": "#b92902",
+                    "on-secondary-container": "#d2d0cf",
+                    "surface-container-lowest": "#000000",
+                    "on-tertiary-fixed": "#352200",
+                    "on-surface-variant": "#adaaaa",
+                    "on-secondary": "#525151",
+                    "on-secondary-fixed": "#403f3f",
+                    "primary-dim": "#00ec3b",
+                    "inverse-on-surface": "#565554",
+                    "on-primary-fixed-variant": "#006513",
+                    "surface-container": "#1a1919",
+                    "secondary-dim": "#d7d4d3",
+                    "on-surface": "#ffffff",
+                    "tertiary-fixed-dim": "#eba200",
+                    "outline": "#777575",
+                    "surface-variant": "#262626",
+                    "primary-fixed-dim": "#00ec3b",
+                    "on-primary-container": "#005a10",
+                    "surface-container-highest": "#262626",
+                    "tertiary-container": "#fdaf00",
+                    "surface-tint": "#9cff93",
+                    "on-error-container": "#ffd2c8",
+                    "on-error": "#450900",
+                    "secondary-fixed": "#e5e2e1",
+                    "surface-container-low": "#131313",
+                    "tertiary-dim": "#eba200",
+                    "on-primary-fixed": "#00440a",
+                    "inverse-surface": "#fcf8f8",
+                    "error": "#ff7351",
+                    "tertiary-fixed": "#fdaf00",
+                    "tertiary": "#ffc15d",
+                    "on-primary": "#006413",
+                    "on-tertiary-container": "#513500",
+                    "on-tertiary-fixed-variant": "#5c3d00",
+                    "primary-fixed": "#00fc40",
+                    "error-dim": "#d53d18",
+                    "surface-bright": "#2c2c2c",
+                    "primary": "#9cff93",
+                    "on-background": "#ffffff",
+                    "secondary-container": "#474646",
+                    "primary-container": "#00fc40",
+                    "outline-variant": "#494847",
+                    "surface-dim": "#0e0e0e",
+                    "surface-container-high": "#201f1f",
+                    "secondary": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#5c5b5b",
+                    "secondary-fixed-dim": "#d7d4d3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "0px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Space Grotesk"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0e0e0e;
+            background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 255, 0, 0.03));
+            background-size: 100% 4px, 3px 100%;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pixel-glow {
+            text-shadow: 0 0 10px rgba(156, 255, 147, 0.6);
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#0e0e0e] dark:bg-black/90 backdrop-blur-md border-b-2 border-[#00FF41] flex justify-between items-center px-4 py-3">
+<div class="text-xl font-black text-[#00FF41] drop-shadow-[0_0_8px_rgba(0,255,65,0.5)] font-['Space_Grotesk'] uppercase tracking-tighter">PIXELPULSE</div>
+<div class="hidden md:flex items-center gap-6 font-['Space_Grotesk'] uppercase tracking-tighter font-bold text-xs">
+<a class="text-[#00FF41] border-b-2 border-[#00FF41]" href="#">HOME</a>
+<a class="text-[#00FF41]/70 hover:text-[#00FF41] transition-colors" href="#features">MODULES</a>
+<a class="text-[#00FF41]/70 hover:text-[#00FF41] transition-colors" href="#specs">SYSTEM</a>
+</div>
+<a class="bg-primary text-on-primary px-3 py-1 font-bold text-xs uppercase tracking-tighter hover:bg-[#00fc40]" href="#cta">BUY ON ETSY</a>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-24 pb-12 px-6 min-h-[70vh] flex flex-col items-center justify-center text-center">
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+<div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto">
+<div class="inline-block border border-primary px-3 py-0.5 mb-4">
+<p class="text-primary font-label text-[10px] tracking-[0.2em] uppercase">SYSTEM V1.0 // BOOTING...</p>
+</div>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter uppercase mb-2 pixel-glow text-primary">PIXELPULSE</h1>
+<p class="text-lg text-on-surface-variant font-light uppercase tracking-widest mb-8 max-w-lg mx-auto">Your ambient info display. Live data. Zero apps.</p>
+<div class="relative aspect-video w-full max-w-2xl mx-auto group">
+<div class="absolute -inset-1 bg-primary/10 blur opacity-75"></div>
+<div class="relative w-full h-full bg-surface-container-lowest border border-outline-variant overflow-hidden">
+<img alt="Modern dark workspace featuring a glowing green LED matrix display showing cryptographic data" class="w-full h-full object-cover mix-blend-screen opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV1FSJLf6o7qmcWJURUmk_Vl77jW8DFfY8zzNSWyNllCqc--7QLYTIX9-8ZfNv6Kk6_0XMOUJCMvsxoTX7WV8aY6vFUadqZ0aF_BTszR5oeK9DAEA_N7aFqQ62Jc7yse-snGLvdf1aPUK2xxCa7SR1ci7wKLM8zTKrIAx4ezBIpHXgbu-jTno_U_6isrSpAw5gbD6AT1sazOVRKK-NAJyQwzcBQZKWp0DZPR5uMYQrjVPRJKlPjKJMDBDqyIhkDrPT5DbRMouiFA"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Features Section: The Modules -->
+<section class="py-12 px-6 max-w-7xl mx-auto" id="features">
+<div class="mb-8 flex items-end justify-between border-b border-primary-dim pb-2">
+<h2 class="text-2xl font-black tracking-tighter uppercase">01 // MODULES</h2>
+<span class="font-label text-primary text-[10px] tracking-widest hidden md:block uppercase">SELECT PROGRAM</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 border border-outline-variant">
+<!-- Mode 1 -->
+<div class="p-4 border-b border-outline-variant md:border-r hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-primary mb-2 block text-xl" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<h3 class="text-xs font-bold mb-1 uppercase tracking-tighter">Word Clock</h3>
+<p class="text-[10px] text-on-surface-variant leading-tight">Abstract time visualized in RGB.</p>
+</div>
+<!-- Mode 2 -->
+<div class="p-4 border-b border-outline-variant md:border-r hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-primary mb-2 block text-xl">cloud</span>
+<h3 class="text-xs font-bold mb-1 uppercase tracking-tighter">Weather</h3>
+<p class="text-[10px] text-on-surface-variant leading-tight">Local climate via OpenWeather API.</p>
+</div>
+<!-- Mode 3 -->
+<div class="p-4 border-b border-outline-variant md:border-r-0 hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-primary mb-2 block text-xl" style="font-variation-settings: 'FILL' 1;">currency_bitcoin</span>
+<h3 class="text-xs font-bold mb-1 uppercase tracking-tighter">Crypto</h3>
+<p class="text-[10px] text-on-surface-variant leading-tight">Live prices for BTC, ETH, SOL, DOGE — any coin you want.</p>
+</div>
+<!-- Mode 4 -->
+<div class="p-4 border-b md:border-b-0 border-outline-variant md:border-r hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-primary mb-2 block text-xl">grid_view</span>
+<h3 class="text-xs font-bold mb-1 uppercase tracking-tighter">Pixel Art</h3>
+<p class="text-[10px] text-on-surface-variant leading-tight">Custom 64x32 animations.</p>
+</div>
+<!-- Mode 5 -->
+<div class="p-4 border-b md:border-b-0 border-outline-variant md:border-r hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-primary mb-2 block text-xl">flight_takeoff</span>
+<h3 class="text-xs font-bold mb-1 uppercase tracking-tighter">Flight Ops</h3>
+<p class="text-[10px] text-on-surface-variant leading-tight">Live departures tracking.</p>
+</div>
+<!-- Mode 6 -->
+<div class="p-4 hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-primary mb-2 block text-xl">terminal</span>
+<h3 class="text-xs font-bold mb-1 uppercase tracking-tighter">Your Module</h3>
+<p class="text-[10px] text-on-surface-variant leading-tight">Build your own display mode. Open-source firmware means the only limit is your imagination.</p>
+</div>
+</div>
+</section>
+<!-- Initialization & Specs Combined / Streamlined -->
+<section class="py-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<!-- Section 02 -->
+<div>
+<h2 class="text-2xl font-black tracking-tighter uppercase mb-6">02 // INITIALIZATION</h2>
+<div class="space-y-6">
+<div class="flex gap-4 items-center">
+<div class="bg-primary text-on-primary w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-xs">01</div>
+<div>
+<h4 class="text-sm font-bold uppercase">Power Injection</h4>
+<p class="text-[11px] text-on-surface-variant">USB-C 5V connection. Any phone charger works.</p>
+</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="bg-primary text-on-primary w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-xs">02</div>
+<div>
+<h4 class="text-sm font-bold uppercase">Network Handshake</h4>
+<p class="text-[11px] text-on-surface-variant">Connect to the PixelPulse WiFi hotspot and configure via captive portal in your browser. No app required.</p>
+</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="bg-primary text-on-primary w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-xs">03</div>
+<div>
+<h4 class="text-sm font-bold uppercase">Autonomous Execution</h4>
+<p class="text-[11px] text-on-surface-variant">Web interface dashboard.</p>
+</div>
+</div>
+</div>
+<div class="mt-8 bg-surface-container-lowest p-4 border border-primary-container relative">
+<div class="font-mono text-[10px] text-primary/80 space-y-0.5">
+<p class="text-white">&gt; boot --verbose</p>
+<p>[ OK ] Loading kernel 5.10...</p>
+<p>[ OK ] Matrix 64x32 UP</p>
+<p>[ OK ] WiFi wlan0 UP</p>
+<p class="text-primary">&gt; RUN main_loop.exe</p>
+</div>
+</div>
+</div>
+<!-- Section 03 -->
+<div id="specs">
+<h2 class="text-2xl font-black tracking-tighter uppercase mb-6">03 // SYSTEM SPECS</h2>
+<div class="grid grid-cols-1 gap-px bg-outline-variant border border-outline-variant text-xs">
+<div class="bg-surface p-3 flex justify-between">
+<span class="text-on-surface-variant uppercase text-[10px]">Processor</span>
+<span class="font-bold text-primary">ESP32 Dual-Core</span>
+</div>
+<div class="bg-surface p-3 flex justify-between">
+<span class="text-on-surface-variant uppercase text-[10px]">Display</span>
+<span class="font-bold text-primary">RGB LED Matrix (P2.5)</span>
+</div>
+<div class="bg-surface p-3 flex justify-between">
+<span class="text-on-surface-variant uppercase text-[10px]">Resolution</span>
+<span class="font-bold text-primary">64 x 32 Pixels</span>
+</div>
+<div class="bg-surface p-3 flex justify-between">
+<span class="text-on-surface-variant uppercase text-[10px]">Power</span>
+<span class="font-bold text-primary">USB-C (5V @ 4A)</span>
+</div>
+</div>
+<div class="mt-4 p-4 bg-surface-container border-l-2 border-primary">
+<p class="text-[10px] font-label text-primary mb-1 uppercase tracking-widest">Open-Source Heritage</p>
+<p class="text-[11px] text-on-surface-variant leading-tight">Custom open-source firmware. Fully hackable via UART headers. Right to modify guaranteed.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-16 px-6 bg-primary flex flex-col items-center text-center" id="cta">
+<h2 class="text-on-primary text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4 italic">SECURE HARDWARE</h2>
+<p class="text-on-primary-container text-sm font-bold uppercase tracking-widest mb-8 max-w-md">NOW AVAILABLE.</p>
+<div class="mb-6 text-on-primary">
+<div class="text-5xl font-black tracking-tighter">$99</div>
+<div class="text-[10px] font-bold uppercase tracking-widest opacity-80 mt-1">FREE SHIPPING IN THE US</div>
+</div>
+<a class="group relative bg-[#006413] text-primary text-xl font-black px-10 py-4 uppercase tracking-tighter transition-all hover:scale-105 active:scale-95" href="#">
+<span class="relative z-10">BUY ON ETSY_</span>
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10"></div>
+</a>
+<div class="mt-6 flex gap-4 text-on-primary-container font-label text-[10px] tracking-tighter opacity-60">
+<span>// INTERNATIONAL SHIPPING AVAILABLE</span>
+<span>// DEV SUPPORT</span>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] border-t border-[#00FF41]">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 p-6 max-w-7xl mx-auto">
+<div class="flex flex-col gap-1 text-center md:text-left">
+<div class="text-xs font-bold text-[#00FF41] font-['Space_Grotesk'] tracking-tighter uppercase">PIXELPULSE // V1.0</div>
+<div class="text-[9px] text-[#00FF41]/50 font-['Space_Grotesk'] uppercase tracking-[0.1em]">© 2026 PIXELPULSE // STATUS: NOMINAL</div>
+</div>
+<div class="flex items-center gap-6 font-['Space_Grotesk'] text-[9px] uppercase tracking-widest">
+<a class="text-[#00FF41]/70 hover:text-[#00FF41] transition-colors" href="#">GITHUB</a>
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></div>
+<span class="text-primary">SYSTEM ONLINE</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

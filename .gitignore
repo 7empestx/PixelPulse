@@ -1,0 +1,14 @@
+.pio/
+.cache/
+.clangd
+.pytest_cache/
+__pycache__/
+*.bin
+.env
+.DS_Store
+compile_commands.json
+Miniforge3-*.sh
+qemu-esp32/
+.python-version
+.codex/
+.mcp.json
